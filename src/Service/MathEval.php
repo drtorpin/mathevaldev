@@ -1,15 +1,32 @@
 <?php
-
+/**
+ * Класс проверяет на валидность и вычисляет математическое выражение из строки
+ * Class MathEval
+ */
 class MathEval
 {
+    /**
+     * @var еstring - текст ошибки
+     */
     private $error;
 
+    /**
+     * Вычисляем входящее математическое выражение
+     * @param $expression
+     * @return mixed
+     */
     public function getExpressionEval($expression)
     {
         if (!$this->validateExpression($expression)) {
-            return $this->getError();
+            $this->getError();
         }
 
+        $result = $this->evalExpression($expression);
+        if ($this->getError()) {
+            return $this->getError();
+        } else {
+            return $result;
+        }
     }
 
     /**
@@ -21,9 +38,32 @@ class MathEval
         return [
             '-',
             '+',
-            '=',
+            '*',
             ':'
         ];
+    }
+
+    /**
+     * Вычисление
+     * @param $number1 integer - исходное число
+     * @param $sign string - математический знак из выражения
+     * @param $number2 integer - второе число в выражении
+     * @return float|int - результат вычисления одного действия
+     */
+    private function evalMathAction($number1,$sign,$number2)
+    {
+        switch ($sign) {
+            case '+':
+                return $number1 + $number2;
+            case '-':
+                return $number1 - $number2;
+            case ':':
+                return $number1/$number2;
+            case '*':
+                return $number1 * $number2;
+        }
+        $this->setError('Ошибка при вычислениее. Не определено математическое действие.');
+        return 0;
     }
 
     /**
@@ -94,9 +134,27 @@ class MathEval
         return true;
     }
 
+    /**
+     * @param $expression string - математическое выражение
+     * @return integer - результат вычисления
+     */
     private function evalExpression($expression)
     {
+        $expressionCheck = trim(preg_replace('/(\d{1,})/','\1 ',$expression));
+        $expressionParts = explode(' ',$expressionCheck);
+        $count = count($expressionParts);
+        if ($count > 1) {
+            $result = $expressionParts[$n];
+            for ($n = 0; $n < $count; $n+2) {
+                if (isset($expressionParts[$n+2]) ) {
+                    $result = $this->evalMathAction($result,$expressionParts[$n+1],$expressionParts[$n+2]);
+                }
+            }
+        } else {
+            return $expression;
+        }
 
+        return $result;
     }
 
 }
