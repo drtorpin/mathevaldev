@@ -6,7 +6,10 @@ class MathEval
 
     public function getExpressionEval($expression)
     {
-        // $expression
+        if (!$this->validateExpression($expression)) {
+            return $this->getError();
+        }
+
     }
 
     /**
@@ -51,19 +54,49 @@ class MathEval
     }
 
     /**
-     * @param $expression
+     * Получить сообщение об ошибке
+     * @return mixed
+     */
+    private function getError()
+    {
+        return $this->error;
+    }
+
+    /**
+     * Проверка введенного выражения на валидность
+     * @param $expression string - входящее математическое выражение в виде строки
+     * @return bool - валидное или нет
      */
     private function validateExpression($expression)
     {
-        if (preg_math('/[0-9'.$this->getRegValidSymbols().']/',$expression)) {
-            return $this->setError('В выражении используются недопустимые символы. Необходимо использовать только числа и знаки: '.$this->getListValidSymbols());
+        $validSymbols = $this->getRegValidSymbols();
+        if (preg_math('/[0-9'.$validSymbols.']/',$expression)) {
+            $this->setError('В выражении используются недопустимые символы. Необходимо использовать только числа и следующие математические знаки: '.$this->getListValidSymbols());
+            return false;
         }
 
-        $expression = preg_replace(['/\d{1,}/','/[^\d]/'],['1','_'],$expression);
+        $checkExpression = preg_replace(['/\d{1,}/','/[^\d]/'],['1','_'],$expression);
+        if (preg_match('/['.$validSymbols.']{2,}/',$checkExpression)) {
+            $this->setError('В выражении нельзя использовать два или больше подряд знаков математических действий.');
+            return false;
+        }
+
+        if ($checkExpression[0] == '_') {
+            $this->setError('Выражение не должно начинаться со знака математического действия.');
+            return false;
+        }
+
+        if ($checkExpression[strlen($checkExpression)-1] == '_') {
+            $this->setError('Выражение не должно заказнчиваться знаком математического действия.');
+            return false;
+        }
+
+        return true;
     }
 
-    private function parceExpression($expression)
+    private function evalExpression($expression)
     {
-        // $expression =
+
     }
+
 }
