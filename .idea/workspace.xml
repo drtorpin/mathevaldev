@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a073ac12-f846-4f4d-b6a3-08d5dabf1b92" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Service/TestMathEval.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/MathEval.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/MathEval.php" afterDir="false" />
     </list>
@@ -19,15 +20,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -52,11 +44,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Service/MathEval.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
+            <state relative-caret-position="183">
+              <caret line="164" selection-start-line="164" selection-end-line="187" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Service/TestMathEval.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -136,6 +137,7 @@
         <option value="$PROJECT_DIR$/drtorpin/MathEvalBundle/Service/MathEvalService.php" />
         <option value="$PROJECT_DIR$/drtorpin/MathEvalBundle/Controller/MainController.php" />
         <option value="$PROJECT_DIR$/src/Service/MathEval.php" />
+        <option value="$PROJECT_DIR$/src/Service/TestMathEval.php" />
       </list>
     </option>
   </component>
@@ -215,7 +217,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/drtorpin/MathEvalBundle/Service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Service" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -225,6 +227,7 @@
       <recent name="D:\xampp\htdocs\symfony-test.dom\www\src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\symfony-test.dom\www\src\Service" />
       <recent name="D:\xampp\htdocs\symfony-test.dom\www\drtorpin\MathEvalBundle\Service" />
       <recent name="D:\xampp\htdocs\symfony-test.dom\www\drtorpin" />
     </key>
@@ -252,7 +255,7 @@
       <option name="presentableId" value="Default" />
       <updated>1562896673153</updated>
       <workItem from="1562896674713" duration="238000" />
-      <workItem from="1562898930228" duration="6468000" />
+      <workItem from="1562898930228" duration="8741000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1562899698281</created>
@@ -268,11 +271,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562904607956</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="промежуточный библиотека 2">
+      <created>1562905420583</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562905420583</updated>
+    </task>
+    <task id="LOCAL-00004" summary="промежуточный библиотека 3">
+      <created>1562907157193</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562907157193</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6706000" />
+    <option name="totallyTimeSpent" value="8979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1608" height="864" extended-state="6" />
@@ -305,7 +322,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="base" />
     <MESSAGE value="промежуточный библиотека" />
-    <option name="LAST_COMMIT_MESSAGE" value="промежуточный библиотека" />
+    <MESSAGE value="промежуточный библиотека 2" />
+    <MESSAGE value="промежуточный библиотека 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="промежуточный библиотека 3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/drtorpin/MathEvalBundle/MathEvalBundle.php">
@@ -408,8 +427,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Service/MathEval.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
+        <state relative-caret-position="183">
+          <caret line="164" selection-start-line="164" selection-end-line="187" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/TestMathEval.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>

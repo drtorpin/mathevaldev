@@ -157,4 +157,33 @@ class MathEval
         return $result;
     }
 
+    /**
+     * Тестируем вычисление матемтаического выражения
+     * @param $expression
+     * @return int
+     */
+    protected function TestEvalExpression($expression)
+    {
+        return $this->evalExpression($expression);
+    }
+
+    /**
+     * Тестируем валидацию математического выражения
+     * @param $expression
+     * @return bool
+     */
+    protected function TestValidateExpression($expression)
+    {
+        return $this->validateExpression($expression);
+    }
+
+    /**
+     * Тестируем вычисление математического действия
+     * @param $expression
+     * @return bool
+     */
+    protected function TestEvalMathAction($number1,$sign,$number2)
+    {
+        return $this->evalMathAction($number1,$sign,$number2);
+    }
 }
